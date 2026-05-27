@@ -1,0 +1,236 @@
+.flight-predictor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.predictor-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.predictor-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #888;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.controls button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #646cff;
+  color: white;
+  transition: background 0.2s;
+}
+
+.controls button:hover:not(:disabled) {
+  background: #5558dd;
+}
+
+.controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Flight Card */
+.flight-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.flight-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.flight-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-row {
+  background: #252542;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.info-row .label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.info-row .value {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.predict-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: #4ade80;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.predict-btn:hover:not(:disabled) {
+  background: #3bcc70;
+}
+
+/* Prediction Result */
+.prediction-result {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.eta-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eta-value {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #4ade80;
+}
+
+.eta-label {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.prediction-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-card {
+  background: #252542;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.direction-north {
+  color: #4ade80;
+}
+
+.direction-south {
+  color: #f97316;
+}
+
+/* Path Visualization */
+.path-visualization {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+}
+
+.path-visualization h3 {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.path-nodes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.path-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-marker {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.node-info {
+  display: flex;
+  gap: 1rem;
+  background: #252542;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.node-id {
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.node-distance {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.path-connector {
+  color: #646cff;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.empty-state p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .flight-info,
+  .prediction-details {
+    grid-template-columns: 1fr;
+  }
+
+  .eta-value {
+    font-size: 3rem;
+  }
+}
